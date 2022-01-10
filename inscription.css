@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+h1,h6{
+  font-family: 'Alegreya', serif;
+}
+h6
+{
+  font-size: 22px;
+}
+p{
+  font-family: 'Alegreya', serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-image: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,7)),url("car.jpg");
+  background-size: cover;
+  
+}
+::selection{
+  background: red;
+  color: #fff;
+}
+.texte{
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:7px 7px 60px #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url('bg.jpg');
+}
+.texte .titre-text{
+  display: flex;
+  width: 200%;
+}
+.texte .titre{
+  width: 50%;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.texte .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 5px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.mobile{
+  color: black;
+}
+.slide-controls .slider{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #f60202,#f60202);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#mobile1:checked ~ .slider{
+  left: 50%;
+}
+#mobile1:checked ~ label.mobile{
+  color: white;
+  cursor: default;
+  user-select: none;
+}
+#mobile1:checked ~ label.mail{
+  color: white;
+}
+#maile:checked ~ label.mobile{
+  color: white;
+}
+#maile:checked ~ label.mail{
+  cursor: default;
+  user-select: none;
+}
+.texte .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+.hide
+{
+  color: white;
+}
+#phone input
+{
+  width: 50%;
+  height: 50%;
+}
+#phone 
+{
+  width: 150%;
+  padding: 10px
+}
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #fc83bb;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: black;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: black;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .mobile-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .mobile-link a{
+  color: color;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .mobile-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 105%;
+  width: 200%;
+  position: absolute;
+  left: -100%;
+  transition: all 0.4s ease;;
+  color: black;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  color:white;
+
+}
+.field .couleur input
+{
+  background: #f0151F;
+  height: 150px;
+}
+p
+{
+  color: white;
+}
+h6
+{
+  color: white;
+}
+
+.couleur input
+{
+  height: 100%;
+}
+.field label
+{
+  color:white;
+} 
+@media screen and (max-width:1190px)
+{
+    body {
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.text 
+{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
